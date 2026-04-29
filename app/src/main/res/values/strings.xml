@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ma Todo List</string>
+    <string name="hint_add_task">Nouvelle tâche…</string>
+    <string name="action_delete_completed">Supprimer les complétées</string>
+</resources>
