@@ -11,6 +11,7 @@ local.properties
 # Keystore (ne jamais mettre sur GitHub !)
 *.jks
 *.keystore
+key.properties
 
 # OS
 .DS_Store
