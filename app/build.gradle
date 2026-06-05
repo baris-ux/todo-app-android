@@ -10,13 +10,13 @@ keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
 android {
     namespace 'com.example.todoapp'
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
-        applicationId "com.baris.todomaster"
+        applicationId "com.baris.todolist"
         minSdk 24
-        targetSdk 34
-        versionCode 1
+        targetSdk 35
+        versionCode 100
         versionName "1.0"
     }
 

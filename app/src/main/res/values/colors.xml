@@ -8,4 +8,5 @@
     <color name="on_surface_variant">#49454F</color>
     <color name="background">#F4F0F9</color>
     <color name="error">#B3261E</color>
+    <color name="completed_green">#4CAF50</color>
 </resources>

@@ -30,7 +30,10 @@ class MainActivity : AppCompatActivity() {
             val isEmpty = todos.isEmpty()
             binding.layoutEmpty.visibility = if (isEmpty) android.view.View.VISIBLE else android.view.View.GONE
             binding.recyclerView.visibility = if (isEmpty) android.view.View.GONE else android.view.View.VISIBLE
-            binding.textCounter.text = "${todos.count { it.isCompleted }} / ${todos.size} complétées"
+            val completed = todos.count { it.isCompleted }
+            val total = todos.size
+            binding.textCounter.text = "$completed / $total complétées"
+            binding.progressBar.progress = if (total > 0) completed * 100 / total else 0
         }
         binding.editTextTodo.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_DONE) { addTodo(); true } else false

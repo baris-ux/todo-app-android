@@ -2,6 +2,7 @@ package com.example.todoapp
 import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -25,10 +26,12 @@ class TodoAdapter(
             textTodoTitle.text = todo.title
             if (todo.isCompleted) {
                 textTodoTitle.paintFlags = textTodoTitle.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
-                textTodoTitle.alpha = 0.5f
+                textTodoTitle.alpha = 0.4f
+                accentBar.setBackgroundColor(ContextCompat.getColor(root.context, R.color.completed_green))
             } else {
                 textTodoTitle.paintFlags = textTodoTitle.paintFlags and Paint.STRIKE_THRU_TEXT_FLAG.inv()
                 textTodoTitle.alpha = 1.0f
+                accentBar.setBackgroundColor(ContextCompat.getColor(root.context, R.color.primary))
             }
             checkboxTodo.setOnClickListener { onToggle(todo) }
             buttonDelete.setOnClickListener { onDelete(todo) }
